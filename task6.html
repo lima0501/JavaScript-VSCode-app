@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+ <!--Bootstrap scripts (includes CSS CDN and 2 JS CDN's)-->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+ <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+ <!--Google Font-->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300&display=swap" rel="stylesheet">
+
+ <!--Fontawesome-->
+ <script src="https://kit.fontawesome.com/a2ba8b5f34.js" crossorigin="anonymous"></script> 
+
+ <!--Custom CSS-->
+ <link rel="stylesheet" href="style.css" />
+
+
+    <!-- Custom styles for this template -->
+ <link href="form-validation.css" rel="stylesheet">
+
+   <!--Megamenu-->
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+
+<style type="text/css">
+.navbar .megamenu{ padding: 1rem; }
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+   
+   .navbar .has-megamenu{position:static!important;}
+   .navbar .megamenu{left:0; right:0; width:100%; margin-top:0;  }
+   
+}	
+/* ============ desktop view .end// ============ */
+
+
+/* ============ mobile view ============ */
+@media(max-width: 991px){
+   .navbar.fixed-top .navbar-collapse, .navbar.sticky-top .navbar-collapse{
+       overflow-y: auto;
+       max-height: 90vh;
+       margin-top:10px;
+   }
+}
+/* ============ mobile view .end// ============ */
+</style>
+
+<script type="text/javascript">
+   document.addEventListener("DOMContentLoaded", function(){
+       /////// Prevent closing from click inside dropdown
+       document.querySelectorAll('.dropdown-menu').forEach(function(element){
+           element.addEventListener('click', function (e) {
+               e.stopPropagation();
+           });
+       })
+   }); 
+   // DOMContentLoaded  end
+</script>
+
+
+    <title>Order Form of Computer Components</title>
+</head>
+<body class="bg-light">
+     <!--Navigation-->
+   
+     <nav class="navbar navbar-expand-lg py-4 navbar-dark bg-dark">
+        <div class="container-fluid"> 
+            
+             <div class="nav d-flex p-2c nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                 <a class="nav-link active" id="v-pills-OrderForm-tab" data-toggle="pill" href="#v-pills-OrderForm" role="tab" aria-controls="v-pills-OrderForm" aria-selected="true">Order Form for Computer Components</a>
+                 <a class="nav-link" id="v-pills-AboutUs-tab" data-toggle="pill" href="#v-pills-AboutUs" role="tab" aria-controls="v-pills-AboutUs" aria-selected="false">About Us</a>
+                 <a class="nav-link" id="v-pills-Services-tab" data-toggle="pill" href="#v-pills-Services" role="tab" aria-controls="v-pills-Services" aria-selected="false">Services</a>
+                 <a class="nav-link" id="v-pills-Contact-tab" data-toggle="pill" href="#v-pills-Contact" role="tab" aria-controls="v-pills-Contact" aria-selected="false">Contact</a>
+             </div> 
+             
+        </div>
+        
+         <a class="navbar-brand" >
+             <i class="fas fa-computer"></i> &nbsp 
+             <span class="h2">CompuComp</span>
+         </a>
+     </nav>
+     <br>
+
+     <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="v-pills-OrderForm" role="tabpanel" aria-labelledby="v-pills-OrderForm-tab">
+                 <!--your cart-->
+                 <div class="container">
+                    <div class="row">
+    
+                        <aside>
+                            <div class="right col-md-4">
+                                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="text-primary">Your cart</span>
+                                    <span class="badge bg-primary rounded-pill">3</span>
+                                </h4>
+                                <ul class="list-group mb-3">
+                                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                                      <div>
+                                        <h6 class="my-0">First product</h6>
+                                       
+                                      </div>
+                                      <span class="text-muted">$12</span>
+                                      <button type="button" class="btn btn-dark btn-sm">delete</button>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                                      <div>
+                                        <h6 class="my-0">Second product</h6>
+                                     
+                                      </div>
+                                      <span class="text-muted">$8</span>
+                                      <button type="button" class="btn btn-dark btn-sm">delete</button>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                                      <div>
+                                        <h6 class="my-0">Third product</h6>
+                              
+                                      </div>
+                                      <span class="text-muted">$5</span>
+                                      <button type="button" class="btn btn-dark btn-sm">delete</button>
+                                    </li>
+                                    
+                                    <li class="list-group-item d-flex justify-content-between">
+                                      <span>Total (EUR)</span>
+                                      <strong>$20</strong>
+                                    </li>
+                                  </ul>
+                            </div>
+                        </aside>
+                    </div>
+    
+                 </div>  
+
+                <div class="container-fluid">
+
+                  <div class="row">
+                    <!--overview of computer components-->
+                  <div class="left col-lg-7"><h4>Overwiev of Computer Components</h4>
+                     <br>
+                    <!-- ============= COMPONENT ============== -->
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="main_nav">
+                                <ul class="navbar-nav">
+                                    
+                                    <li class="nav-item dropdown has-megamenu">
+                                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Computer Cases  </a>
+                                        <div class="dropdown-menu megamenu" role="menu">
+                                            <div class="row g-3">
+                                                <div class="col-lg-3 col-6">
+                                                    <div class="col-megamenu">
+                                                        <h6 class="title">Sama ARGB-Q5-BK</h6>
+                                                        <ul class="list-unstyled">
+                                                            <br>
+                                                            <li> price: 69,99€</li>
+                                                            <li><img src="/images/SAMA.jpg" class="img-fluid"></li>
+                                                            <br>
+                                                            <br>
+                                                            <br>
+                                                            <li><a href="#">+ further product information </a></li>
+                                                            <li class="btn btn-primary" >add to cart</li>
+                                                        </ul>
+                                                    </div>  <!-- col-megamenu.// -->
+                                                </div><!-- end col-3 -->
+                                                <div class="col-lg-3 col-6">
+                                                    <div class="col-megamenu">
+                                                        <h6 class="title">DIYPC ARGB-Q3.v2-W</h6>
+                                                        <ul class="list-unstyled">
+                                                            <br>
+                                                            <li>price: 89,99€</li>
+                                                            <li><img src="/images/DIYPC.jpg" class="img-fluid"></li>
+                                                            <br>
+                                                            <br>
+                                                            <br>
+                                                            <br>
+                                                            <li><a href="#">+ further product information</a></li>
+                                                            <li class="btn btn-primary" >add to cart</li>
+                                                        </ul>
+                                                    </div>  <!-- col-megamenu.// -->
+                                                </div><!-- end col-3 -->
+                                                <div class="col-lg-3 col-6">
+                                                    <div class="col-megamenu">
+                                                        <h6 class="title">Montech AIR 100 ARGB(B)</h6>
+                                                        <ul class="list-unstyled">
+                                                            <li>price: 79,99€</li>
+                                                            <li><img src="/images/Montech.jpg" class="img-fluid"></li>
+                                                            <br>
+                                                            <br>
+                                                            <br>
+                                                            <li><a href="#">+ further product information</a></li>
+                                                            <li class="btn btn-primary" >add to cart</li>
+                                                        </ul>
+                                                    </div>  <!-- col-megamenu.// -->
+                                                </div>    
+                                                <div class="col-lg-3 col-6">
+                                                    <div class="col-megamenu">
+                                                        <h6 class="title">Fractal Design FD-POR1X-06</h6>
+                                                        <ul class="list-unstyled">
+                                                            <li>price: 109,99€</li>
+                                                            <li><img src="/images/Fractal.jpg" class="img-fluid"></li>
+                                                            <li><a href="#">+ further product information</a></li>
+                                                            <li class="btn btn-primary" >add to cart</li>
+                                                        </ul>
+                                                    </div>  <!-- col-megamenu.// -->
+                                                </div><!-- end col-3 -->
+                                            </div><!-- end row --> 
+                                        </div> <!-- dropdown-mega-menu.// -->
+                                    </li>
+                                    <li class="nav-item dropdown has-megamenu">
+                                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> CPU </a>
+                                        <div class="dropdown-menu megamenu" role="menu">
+                                            <div class="row g-3">
+                                                <div class="col-lg-3 col-6">
+                                                    <div class="col-megamenu">       
+                                                    </div>  <!-- col-megamenu.// -->
+                                                </div><!-- end col-3 -->
+                                                <div class="col-lg-3 col-6">
+                                                    <div class="col-megamenu">   
+                                                    </div>  <!-- col-megamenu.// -->
+                                                </div><!-- end col-3 -->
+                                                <div class="col-lg-3 col-6">
+                                                    <div class="col-megamenu"> 
+                                                    </div>  <!-- col-megamenu.// -->
+                                                </div>    
+                                                <div class="col-lg-3 col-6">
+                                                    <div class="col-megamenu">    
+                                                    </div>  <!-- col-megamenu.// -->
+                                                </div><!-- end col-3 -->
+                                            </div><!-- end row --> 
+                                        </div> <!-- dropdown-mega-menu.// -->
+                                    </li>
+                                    <li class="nav-item dropdown has-megamenu">
+                                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Graphic Cards  </a>
+                                        <div class="dropdown-menu megamenu" role="menu">
+                                            <div class="row g-3">
+                                                <div class="col-lg-3 col-6">
+                                                    <div class="col-megamenu">       
+                                                    </div>  <!-- col-megamenu.// -->
+                                                </div><!-- end col-3 -->
+                                                <div class="col-lg-3 col-6">
+                                                    <div class="col-megamenu">   
+                                                    </div>  <!-- col-megamenu.// -->
+                                                </div><!-- end col-3 -->
+                                                <div class="col-lg-3 col-6">
+                                                    <div class="col-megamenu"> 
+                                                    </div>  <!-- col-megamenu.// -->
+                                                </div>    
+                                                <div class="col-lg-3 col-6">
+                                                    <div class="col-megamenu">    
+                                                    </div>  <!-- col-megamenu.// -->
+                                                </div><!-- end col-3 -->
+                                            </div><!-- end row --> 
+                                        </div> <!-- dropdown-mega-menu.// -->
+                                    </li>
+                                    <li class="nav-item dropdown has-megamenu">
+                                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Memory  </a>
+                                        <div class="dropdown-menu megamenu" role="menu">
+                                            <div class="row g-3">
+                                                <div class="col-lg-3 col-6">
+                                                    <div class="col-megamenu">       
+                                                    </div>  <!-- col-megamenu.// -->
+                                                </div><!-- end col-3 -->
+                                                <div class="col-lg-3 col-6">
+                                                    <div class="col-megamenu">   
+                                                    </div>  <!-- col-megamenu.// -->
+                                                </div><!-- end col-3 -->
+                                                <div class="col-lg-3 col-6">
+                                                    <div class="col-megamenu"> 
+                                                    </div>  <!-- col-megamenu.// -->
+                                                </div>    
+                                                <div class="col-lg-3 col-6">
+                                                    <div class="col-megamenu">    
+                                                    </div>  <!-- col-megamenu.// -->
+                                                </div><!-- end col-3 -->
+                                            </div><!-- end row --> 
+                                        </div> <!-- dropdown-mega-menu.// -->
+                                    </li>
+                                    <li class="nav-item dropdown has-megamenu">
+                                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Motherboard  </a>
+                                        <div class="dropdown-menu megamenu" role="menu">
+                                            <div class="row g-3">
+                                                <div class="col-lg-3 col-6">
+                                                    <div class="col-megamenu">       
+                                                    </div>  <!-- col-megamenu.// -->
+                                                </div><!-- end col-3 -->
+                                                <div class="col-lg-3 col-6">
+                                                    <div class="col-megamenu">   
+                                                    </div>  <!-- col-megamenu.// -->
+                                                </div><!-- end col-3 -->
+                                                <div class="col-lg-3 col-6">
+                                                    <div class="col-megamenu"> 
+                                                    </div>  <!-- col-megamenu.// -->
+                                                </div>    
+                                                <div class="col-lg-3 col-6">
+                                                    <div class="col-megamenu">    
+                                                    </div>  <!-- col-megamenu.// -->
+                                                </div><!-- end col-3 -->
+                                            </div><!-- end row --> 
+                                        </div> <!-- dropdown-mega-menu.// -->
+                                    </li>
+                                    <li class="nav-item dropdown has-megamenu">
+                                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Power Supplies  </a>
+                                        <div class="dropdown-menu megamenu" role="menu">
+                                            <div class="row g-3">
+                                                <div class="col-lg-3 col-6">
+                                                    <div class="col-megamenu">       
+                                                    </div>  <!-- col-megamenu.// -->
+                                                </div><!-- end col-3 -->
+                                                <div class="col-lg-3 col-6">
+                                                    <div class="col-megamenu">   
+                                                    </div>  <!-- col-megamenu.// -->
+                                                </div><!-- end col-3 -->
+                                                <div class="col-lg-3 col-6">
+                                                    <div class="col-megamenu"> 
+                                                    </div>  <!-- col-megamenu.// -->
+                                                </div>    
+                                                <div class="col-lg-3 col-6">
+                                                    <div class="col-megamenu">    
+                                                    </div>  <!-- col-megamenu.// -->
+                                                </div><!-- end col-3 -->
+                                        </div> <!-- dropdown-mega-menu.// -->
+                                    </li>
+                                </ul>
+                        
+                            </div> <!-- navbar-collapse.// -->
+                        </div> <!-- container-fluid.// -->
+                    </nav>
+
+                  </div>
+                  </div>
+                  <br>
+                  <!--billing address-->
+                  <div class="row">
+              
+                  <div class=" left col-lg-7">
+                  <h4 class="mt-1">Billing address</h4>
+                  <form class="needs-validation" novalidate>
+                      <div class="row g-3">
+                          <div class="col-sm-6">
+                              <label for="firstName" class="form-label">First name</label>
+                              <input type="text" class="form-control" id="firstName" placeholder="Max" value="" required>
+                              <div class="invalid-feedback">
+                                Valid first name is required.
+                              </div>
+                          </div>
+
+                          <div class="col-sm-6">
+                          <label for="lastName" class="form-label">Last name</label>
+                          <input type="text" class="form-control" id="lastName" placeholder="Mustermann" value=" " required>
+                          <div class="invalid-feedback">
+                              Valid last name is required.
+                          </div>
+                          </div>
+
+                          <div class="col-12">
+                          <label for="username" class="form-label">Username</label>
+                          <div class="input-group has-validation">
+                              <span class="input-group-text">@</span>
+                              <input type="text" class="form-control" id="username" placeholder="Username" required>
+                          <div class="invalid-feedback">
+                              Your username is required.
+                              </div>
+                          </div>
+                          </div>
+
+                          <div class="col-12">
+                          <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+                          <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                          <div class="invalid-feedback">
+                              Please enter a valid email address for shipping updates.
+                          </div>
+                          </div>
+
+                          <div class="col-12">
+                          <label for="address" class="form-label">Address</label>
+                          <input type="text" class="form-control" id="address" placeholder="Musterstraße 12" required>
+                          <div class="invalid-feedback">
+                              Please enter your shipping address.
+                          </div>
+                          </div>
+
+                          <div class="col-12">
+                          <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
+                          <input type="text" class="form-control" id="address2" placeholder="Apartment or Suite">
+                          </div>
+
+                          <div class="col-md-5">
+                          <label for="country" class="form-label">Country</label>
+                          <select class="form-select" id="country">
+                              <option value="">Germany</option>
+
+                          </select>
+                      
+                          </div>
+
+                          <div class="col-md-4">
+                          <label for="state" class="form-label">State</label>
+                          <select class="form-select" id="state" required>
+                              <option value="">Choose...</option>
+                              <option>Baden-Württemberg</option>
+                              <option>Bayern</option>
+                              <option>Berlin</option>
+                              <option>Brandenburg</option>
+                              <option>Bremen</option>
+                              <option>Hamburg</option>
+                              <option>Hessen</option>
+                              <option>Mecklenburg-Vorpommern</option>
+                              <option>Niedersachsen</option>
+                              <option>Nordrhein-Westfalen</option>
+                              <option>Rheinland-Pfalz</option>
+                              <option>Saarland</option>
+                              <option>Sachsen</option>
+                              <option>Sachsen-Anhalt</option>
+                              <option>Schleswig-Holstein</option>
+                              <option>Thüringen</option>
+                          </select>
+                          <div class="invalid-feedback">
+                              Please provide a valid state.
+                          </div>
+                          </div>
+
+                          <div class="col-md-3">
+                          <label for="zip" class="form-label">Zip</label>
+                          <input type="text" class="form-control" id="zip" placeholder="" required>
+                          <div class="invalid-feedback">
+                              Zip code required.
+                          </div>
+                          </div>
+                      </div>
+
+                      <hr class="my-4">
+
+                      <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="same-address">
+                          <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
+                      </div>
+
+                      <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="save-info">
+                          <label class="form-check-label" for="save-info">Save this information for next time</label>
+                      </div>
+                  
+                  
+                  </div>
+                  </div>
+                  <br>
+                  <!--payment-->
+                  <div class="row">
+                  
+                  <div class="left col-lg-7"><h4 class="mb-3">Payment</h4>
+                      
+                        <div class="my-3">
+                          <div class="form-check">
+                            <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                            <label class="form-check-label" for="credit">Credit card</label>
+                          </div>
+                          <div class="form-check">
+                            <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                            <label class="form-check-label" for="debit">Debit card</label>
+                          </div>
+                          <div class="form-check">
+                            <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                            <label class="form-check-label" for="paypal">PayPal</label>
+                          </div>
+                        </div>
+              
+                          <div class="row gy-3">
+                          <div class="col-md-6">
+                            <label for="cc-name" class="form-label">Name on card</label>
+                            <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                            <small class="text-muted">Full name as displayed on card</small>
+                            <div class="invalid-feedback">
+                              Name on card is required
+                            </div>
+                          </div>
+                          
+                      
+                          <div class="col-md-6">
+                            <label for="cc-number" class="form-label">Credit card number</label>
+                            <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                            <div class="invalid-feedback">
+                              Credit card number is required
+                            </div>
+                          </div>
+                          </div>
+                          <br>
+                          <div class="row">
+                          <div class="col-md-3">
+                            <label for="cc-expiration" class="form-label">Expiration</label>
+                            <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                            <div class="invalid-feedback">
+                              Expiration date required
+                            </div>
+                          </div> 
+              
+                          <div class="col-md-3">
+                            <label for="cc-cvv" class="form-label">CVV</label>
+                            <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                            <div class="invalid-feedback">
+                              Security code required
+                            </div>
+                          </div>
+                          </div>
+                          <!--checkout-->
+                          <hr class="my-4">
+                          <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+                  </form>
+                  </div>
+                  </div>
+
+                  <!--footer-->
+                  <footer class="my-5 pt-5 text-muted text-center text-small">
+                    <p class="mb-1">&copy; 2017–2024 CompuComp</p>
+                    <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#">Privacy</a></li>
+                    <li class="list-inline-item"><a href="#">Terms</a></li>
+                    <li class="list-inline-item"><a href="#">Support</a></li>
+                    </ul>
+                  </footer>
+
+        
+                </div>
+                
+          </div>
+          
+        <!--about us-->
+        <div class="tab-pane fade" id="v-pills-AboutUs" role="tabpanel" aria-labelledby="v-pills-AboutUs-tab">
+            <footer class="my-5 pt-5 text-muted text-center text-small">
+                <p class="mb-1">&copy; 2017–2024 CompuComp</p>
+                <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Privacy</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Support</a></li>
+                </ul>
+            </footer>
+        </div>
+        <!--services-->
+        <div class="tab-pane fade" id="v-pills-Services" role="tabpanel" aria-labelledby="v-pills-Services-tab">
+            <footer class="my-5 pt-5 text-muted text-center text-small">
+                <p class="mb-1">&copy; 2017–2024 CompuComp</p>
+                <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Privacy</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Support</a></li>
+                </ul>
+            </footer>
+        </div>
+        <!--contact-->
+        <div class="tab-pane fade" id="v-pills-Contact" role="tabpanel" aria-labelledby="v-pills-Contact-tab">
+            <footer class="my-5 pt-5 text-muted text-center text-small">
+                <p class="mb-1">&copy; 2017–2024 CompuComp</p>
+                <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Privacy</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Support</a></li>
+                </ul>
+            </footer>
+        </div>
+     </div>            
+
+       
+            <script src="form-validation.js"></script>
+
+
+
+</body>
+</html>

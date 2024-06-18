@@ -1,0 +1,32 @@
+/*general*/
+body{
+font-family: "Yanone Kaffeesatz";
+font-size: 1.2rem;
+}
+
+.h2{
+    font-family: "Yanone Kaffeesatz";
+    font-size: 2.4rem;
+
+}
+.mt-1 {
+    margin-top: (spacer * 1.25) !important;
+}
+
+aside{
+    position: fixed;
+    padding: 10px;
+    left: 10px;
+    right: 0px;
+}
+
+.right{
+    float: right;
+    margin: 50px;
+    width: 25%; 
+}
+
+.left{
+    float: left;
+    margin-left: 50px;
+}
